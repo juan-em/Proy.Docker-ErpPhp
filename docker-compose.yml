@@ -16,6 +16,7 @@ services:
         networks:
             - default
     www:
+        image: "aldorama/erp:latest"
         build: .
         ports: 
             - "80:80"
