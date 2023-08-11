@@ -60,7 +60,7 @@
 							<td width="43%"><select id="cboProvincias" name="cboProvincias" class="comboGrande">
 							<option value="0">Seleccione una provincia</option>
 								<?php
-								for ($contador = 1; $contador <= mysqli_num_rows($res_provincias); $contador++){ ?>
+								for ($contador = 0; $contador < mysqli_num_rows($res_provincias); $contador++){ ?>
 								<option value="<?php echo mysqli_result($res_provincias,$contador,"codprovincia")?>"><?php echo mysqli_result($res_provincias,$contador,"nombreprovincia")?></option>
 								<?php 
 								} ?>				
@@ -72,11 +72,11 @@
 						$contador=0;
 					  ?>
 						<tr>
-							<td width="15%">Entidad Bancaria</td>
+							<td width="15%">Entidad Bancaria></td>
 							<td width="43%"><select id="cboBanco" name="cboBanco" class="comboGrande">
 							<option value="0">Seleccione una Entidad Bancaria</option>
-									<?php
-								for ($contador = 1; $contador <= mysqli_num_rows($res_entidades); $contador++) { ?>
+								<?php
+								for ($contador = 0; $contador < mysqli_num_rows($res_entidades); $contador++) { ?>
 								<option value="<?php echo mysqli_result($res_entidades,$contador,"codentidad")?>"><?php echo mysqli_result($res_entidades,$contador,"nombreentidad")?></option>
 								<?php 
 								} ?>

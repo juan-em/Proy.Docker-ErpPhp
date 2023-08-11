@@ -7,8 +7,8 @@ if (!isset($accion)) { $accion=$_GET["accion"]; }
 $nombrefp=$_POST["Anombrefp"];
 
 if ($accion=="alta") {
-	$query_operacion="INSERT INTO formapago (codformapago, nombrefp, borrado) 
-					VALUES ('', '$nombrefp', '0')";					
+	$query_operacion="INSERT INTO formapago (nombrefp, borrado) 
+					VALUES ('$nombrefp', '0')";					
 	$rs_operacion=mysqli_query($descriptor,$query_operacion);
 	if ($rs_operacion) { $mensaje="La forma de pago ha sido dada de alta correctamente"; }
 	$cabecera1="Inicio >> Formas de pago &gt;&gt; Nueva Forma de Pago ";

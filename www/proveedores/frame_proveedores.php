@@ -19,7 +19,6 @@ function pon_prefijo(pref,nombre,nif) {
 <? include ("../conectar.php"); ?>
 <body>
 <?
-	
 	$consulta="SELECT * FROM proveedores WHERE borrado=0 ORDER BY codproveedor ASC";
 	$rs_tabla = mysqli_query($descriptor,$consulta);
 	$nrs=mysqli_num_rows($rs_tabla);

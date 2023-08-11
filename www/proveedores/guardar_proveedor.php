@@ -18,8 +18,8 @@ $email=$_POST["aemail"];
 $web=$_POST["aweb"];
 
 if ($accion=="alta") {
-	$query_operacion="INSERT INTO proveedores (codproveedor, nombre, nif, direccion, codprovincia, localidad, codentidad, 			cuentabancaria, codpostal, telefono, movil, email, web, borrado) 
-					VALUES ('', '$nombre', '$nif', '$direccion', '$codprovincia', '$localidad', '$codentidad', '$cuentabanco', '$codpostal', '$telefono', '$movil', '$email', '$web', '0')";					
+	$query_operacion="INSERT INTO proveedores (nombre, nif, direccion, codprovincia, localidad, codentidad, 			cuentabancaria, codpostal, telefono, movil, email, web, borrado) 
+					VALUES ( '$nombre', '$nif', '$direccion', '$codprovincia', '$localidad', '$codentidad', '$cuentabanco', '$codpostal', '$telefono', '$movil', '$email', '$web', '0')";					
 	$rs_operacion=mysqli_query($descriptor,$query_operacion);
 	if ($rs_operacion) { $mensaje="El proveedor ha sido dado de alta correctamente"; }
 	$cabecera1="Inicio >> Proveedores &gt;&gt; Nuevo Proveedor ";

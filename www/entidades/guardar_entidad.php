@@ -7,8 +7,8 @@ if (!isset($accion)) { $accion=$_GET["accion"]; }
 @$nombreentidad=$_POST["Anombreentidad"];
 
 if ($accion=="alta") {
-	$query_operacion="INSERT INTO entidades (codentidad, nombreentidad, borrado) 
-					VALUES ('', '$nombreentidad', '0')";					
+	$query_operacion="INSERT INTO entidades (nombreentidad, borrado) 
+					VALUES ('$nombreentidad', '0')";					
 	$rs_operacion=mysqli_query($descriptor,$query_operacion);
 	if ($rs_operacion) { $mensaje="La entidad ha sido dada de alta correctamente"; }
 	$cabecera1="Inicio >> Entidades bancarias &gt;&gt; Nueva Entidad Bancaria ";
